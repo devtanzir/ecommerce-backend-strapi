@@ -28,12 +28,12 @@
       "type": "text"
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "category": {
       "type": "enumeration",
@@ -41,7 +41,10 @@
         "t-shirt",
         "mug",
         "hoodie",
-        "stickers"
+        "stickers",
+        "shirt",
+        "toy",
+        "kids"
       ],
       "default": "t-shirt",
       "required": true
@@ -57,7 +60,9 @@
         "blue",
         "green",
         "yellow",
-        "white"
+        "white",
+        "orange",
+        "black"
       ],
       "required": true
     },
