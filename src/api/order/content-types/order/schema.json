@@ -4,46 +4,28 @@
   "info": {
     "singularName": "order",
     "pluralName": "orders",
-    "displayName": "order"
+    "displayName": "order",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "email": {
-      "type": "email",
-      "required": true
-    },
-    "orderId": {
-      "type": "uid",
-      "required": true
-    },
-    "paymentInfo": {
-      "type": "json"
-    },
-    "products": {
-      "type": "json",
-      "required": true
-    },
-    "address": {
-      "type": "text",
-      "required": true
-    },
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "transactionId": {
+    "username": {
       "type": "string"
     },
-    "amount": {
-      "type": "integer",
-      "required": true
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "orders"
     },
-    "status": {
-      "type": "string",
-      "required": true
+    "amount": {
+      "type": "float"
+    },
+    "email": {
+      "type": "email"
     }
   }
 }

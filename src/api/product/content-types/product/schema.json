@@ -73,6 +73,21 @@
     "availableQty": {
       "type": "integer",
       "required": true
+    },
+    "brand": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "inversedBy": "products"
     }
   }
 }
