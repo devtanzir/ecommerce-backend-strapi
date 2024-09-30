@@ -26,6 +26,10 @@
     },
     "email": {
       "type": "email"
+    },
+    "deliveryDetails": {
+      "type": "json",
+      "required": true
     }
   }
 }
