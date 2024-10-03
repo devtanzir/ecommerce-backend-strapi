@@ -74,19 +74,16 @@
       "type": "integer",
       "required": true
     },
-    "brand": {
-      "type": "string"
-    },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "products"
     },
-    "orders": {
+    "brands": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::order.order",
+      "target": "api::brand.brand",
       "mappedBy": "products"
     }
   }

@@ -15,12 +15,6 @@
     "username": {
       "type": "string"
     },
-    "products": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product.product",
-      "inversedBy": "orders"
-    },
     "amount": {
       "type": "float"
     },
@@ -30,6 +24,12 @@
     "deliveryDetails": {
       "type": "json",
       "required": true
+    },
+    "orderId": {
+      "type": "string"
+    },
+    "products": {
+      "type": "json"
     }
   }
 }
