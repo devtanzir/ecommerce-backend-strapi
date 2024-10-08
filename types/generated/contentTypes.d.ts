@@ -920,6 +920,11 @@ export interface ApiCustomerCustomer extends Schema.CollectionType {
       'api::address.address'
     >;
     phone: Attribute.String;
+    orders: Attribute.Relation<
+      'api::customer.customer',
+      'oneToMany',
+      'api::order.order'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -956,6 +961,11 @@ export interface ApiOrderOrder extends Schema.CollectionType {
     deliveryDetails: Attribute.JSON & Attribute.Required;
     orderId: Attribute.String;
     products: Attribute.JSON;
+    customer: Attribute.Relation<
+      'api::order.order',
+      'manyToOne',
+      'api::customer.customer'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

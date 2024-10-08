@@ -30,6 +30,12 @@
     },
     "products": {
       "type": "json"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "orders"
     }
   }
 }
