@@ -21,11 +21,11 @@
       "required": true,
       "unique": true
     },
-    "addresses": {
+    "address": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToOne",
       "target": "api::address.address",
-      "mappedBy": "customers"
+      "inversedBy": "customer"
     },
     "phone": {
       "type": "string"

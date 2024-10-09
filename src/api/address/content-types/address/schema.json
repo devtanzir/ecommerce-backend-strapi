@@ -4,20 +4,21 @@
   "info": {
     "singularName": "address",
     "pluralName": "addresses",
-    "displayName": "address"
+    "displayName": "address",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "street": {
+    "road": {
       "type": "string"
     },
     "city": {
       "type": "string"
     },
-    "state": {
+    "area": {
       "type": "string"
     },
     "postalCode": {
@@ -26,11 +27,14 @@
     "country": {
       "type": "string"
     },
-    "customers": {
+    "customer": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToOne",
       "target": "api::customer.customer",
-      "inversedBy": "addresses"
+      "mappedBy": "address"
+    },
+    "house": {
+      "type": "string"
     }
   }
 }

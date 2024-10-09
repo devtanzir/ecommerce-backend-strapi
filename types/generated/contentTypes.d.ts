@@ -794,21 +794,23 @@ export interface ApiAddressAddress extends Schema.CollectionType {
     singularName: 'address';
     pluralName: 'addresses';
     displayName: 'address';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    street: Attribute.String;
+    road: Attribute.String;
     city: Attribute.String;
-    state: Attribute.String;
+    area: Attribute.String;
     postalCode: Attribute.String;
     country: Attribute.String;
-    customers: Attribute.Relation<
+    customer: Attribute.Relation<
       'api::address.address',
-      'manyToMany',
+      'oneToOne',
       'api::customer.customer'
     >;
+    house: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -914,9 +916,9 @@ export interface ApiCustomerCustomer extends Schema.CollectionType {
   attributes: {
     username: Attribute.String & Attribute.Required;
     email: Attribute.Email & Attribute.Required & Attribute.Unique;
-    addresses: Attribute.Relation<
+    address: Attribute.Relation<
       'api::customer.customer',
-      'manyToMany',
+      'oneToOne',
       'api::address.address'
     >;
     phone: Attribute.String;
