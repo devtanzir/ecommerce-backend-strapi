@@ -1012,11 +1012,6 @@ export interface ApiProductProduct extends Schema.CollectionType {
       }>;
     description: Attribute.Text;
     image: Attribute.Media<'images'> & Attribute.Required;
-    category: Attribute.Enumeration<
-      ['t-shirt', 'mug', 'hoodie', 'stickers', 'shirt', 'toy', 'kids']
-    > &
-      Attribute.Required &
-      Attribute.DefaultTo<'t-shirt'>;
     size: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 70;

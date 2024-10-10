@@ -35,20 +35,6 @@
         "images"
       ]
     },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "t-shirt",
-        "mug",
-        "hoodie",
-        "stickers",
-        "shirt",
-        "toy",
-        "kids"
-      ],
-      "default": "t-shirt",
-      "required": true
-    },
     "size": {
       "type": "string",
       "maxLength": 70
